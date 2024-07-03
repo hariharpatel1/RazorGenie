@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+
 	"razor-genie/internal/commands"
 )
 
@@ -21,7 +22,7 @@ func main() {
 		if len(args) < 1 {
 			err = fmt.Errorf("usage: /generate <prompt>")
 		} else {
-			err = commands.HandleGenerate(args[0])
+			err = commands.HandleGenerate(args[0], args[1])
 		}
 	case "/refactor":
 		// Implement handler for refactoring
